@@ -10,14 +10,21 @@
 
         public static void Core()
         {
-            Manage.PrintGuest();
-
             bool runAgain;
+
             do
             {
+                Manage.PrintGuest();
                 runAgain = Manage.GetInput();
 
             } while (runAgain);
+        }
+
+        public static void End()
+        {
+            Console.WriteLine();
+            Console.WriteLine("End of program.");
+            Console.ReadLine();
         }
     }
 }

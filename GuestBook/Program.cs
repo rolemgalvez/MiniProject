@@ -4,4 +4,4 @@ Section.Welcome();
 
 Section.Core();
 
-//End
+Section.End();

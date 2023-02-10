@@ -91,11 +91,12 @@
         {
             string output;
 
-            bool getAgain = false;
+            bool getAgain;
             do
             {
-                Console.WriteLine("Enter party name: ");
-                output = Console.ReadLine();
+                getAgain = false;
+                Console.Write("Enter party name: ");
+                output = Console.ReadLine().Trim();
 
                 if (string.IsNullOrEmpty(output))
                 {
@@ -111,15 +112,16 @@
         {
             int output;
 
-            bool getAgain = false;
+            bool getAgain;
             do
             {
-                Console.WriteLine("Enter how many are you in the party: ");
+                getAgain = false;
+                Console.Write("Enter how many are you in the party: ");
                 _ = int.TryParse(Console.ReadLine(), out output);
 
-                if (output == 0)
+                if (output <= 0)
                 {
-                    Console.WriteLine("Value should NOT be greater than 0. Try again.");
+                    Console.WriteLine("Value should be greater than 0. Try again.");
                     getAgain = true;
                 }
             } while (getAgain);
